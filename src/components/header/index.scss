@@ -1,0 +1,125 @@
+$height: 82px;
+$bgc:#000;
+$fontSize:12px;
+
+.header {
+  background-color: $bgc;
+  height: $height;
+
+  .header-inner {
+    margin: 0 30px;
+    height: $height;
+    background-color: $bgc;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      a {
+        text-decoration: none;
+
+        .navbar-logo {
+          background-image: url('./img/logo.svg');
+          background-repeat: no-repeat;
+          width: 125px;
+          height: 35px;
+        }
+      }
+    }
+
+    .navbar {
+      flex: 1;
+      height: $height;
+      display: flex;
+
+      ul {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: row;
+        height: $height;
+
+        li {
+          list-style: none;
+          padding: 0 10px;
+          margin: 0 20px;
+          color: #fff;
+
+        }
+
+        li:hover {
+          list-style: none;
+          cursor: pointer;
+          padding: 0 10px;
+          margin: 0 20px;
+          color: #fff;
+          font-size: $fontSize;
+          font-family: Arial, Helvetica, sans-serif;
+          border-bottom: 2px solid #F00000;
+        }
+
+        li:nth-child(1) {
+          list-style: none;
+          cursor: pointer;
+          padding: 0 10px;
+          margin: 0 40px;
+          color: #fff;
+          font-size: $fontSize;
+          font-family: Arial, Helvetica, sans-serif;
+          border-bottom: 2px solid #F00000;
+        }
+      }
+    }
+
+    .info-right {
+
+      width: 140px;
+      height: $height;
+      display: flex;
+      flex-direction: column;
+
+      .info-right-button {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .login {
+          background-color: #fff;
+          padding: 5px 10px;
+          font-size: 12px;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+
+        .signup {
+          background-color: #F00000;
+          padding: 5px 10px;
+          font-size: 12px;
+          border-radius: 3px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+
+      .info-right-nav {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        ul {
+          flex: 1;
+          justify-content: space-around;
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-end;
+          li {
+            list-style: none;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+
+  }
+}
