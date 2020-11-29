@@ -7,14 +7,14 @@ interface State {
   
 }
 
-export default class Footer extends Component<Props, State> {
+export default class Body extends Component<Props, State> {
   state = {}
 
   render() {
     return (
-      <footer className="footer">
-        footer
-      </footer>
+      <div className="body">
+        Body
+      </div>
     )
   }
 }

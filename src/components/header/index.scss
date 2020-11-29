@@ -1,125 +1,133 @@
 $height: 82px;
-$bgc:#000;
-$fontSize:12px;
+// $bgc:#000;
+$bgc:#ccc;
+
 
 .header {
-  background-color: $bgc;
-  height: $height;
+  .navbar {
+    .logo {
+      color: #16a085;
+      font-weight: bold;
+      margin-right: 1.5rem;
+      font-size: 2rem;
+    }
 
-  .header-inner {
-    margin: 0 30px;
+    display: flex;
     height: $height;
     background-color: $bgc;
-    display: flex;
     align-items: center;
 
-    .logo {
-      a {
-        text-decoration: none;
-
-        .navbar-logo {
-          background-image: url('./img/logo.svg');
-          background-repeat: no-repeat;
-          width: 125px;
-          height: 35px;
-        }
-      }
-    }
-
-    .navbar {
-      flex: 1;
-      height: $height;
+    .collapse {
       display: flex;
+      flex-grow: 1;
+      height: $height;
 
-      ul {
+      .links {
         display: flex;
+        margin-right: auto;
         align-items: flex-end;
-        justify-content: flex-start;
-        flex-direction: row;
-        height: $height;
 
-        li {
-          list-style: none;
-          padding: 0 10px;
-          margin: 0 20px;
-          color: #fff;
-
-        }
-
-        li:hover {
-          list-style: none;
-          cursor: pointer;
-          padding: 0 10px;
-          margin: 0 20px;
-          color: #fff;
-          font-size: $fontSize;
-          font-family: Arial, Helvetica, sans-serif;
-          border-bottom: 2px solid #F00000;
-        }
-
-        li:nth-child(1) {
-          list-style: none;
-          cursor: pointer;
-          padding: 0 10px;
-          margin: 0 40px;
-          color: #fff;
-          font-size: $fontSize;
-          font-family: Arial, Helvetica, sans-serif;
-          border-bottom: 2px solid #F00000;
-        }
-      }
-    }
-
-    .info-right {
-
-      width: 140px;
-      height: $height;
-      display: flex;
-      flex-direction: column;
-
-      .info-right-button {
-        flex: 1;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        .login {
-          background-color: #fff;
-          padding: 5px 10px;
-          font-size: 12px;
-          border-radius: 3px;
-          cursor: pointer;
-        }
-
-        .signup {
-          background-color: #F00000;
-          padding: 5px 10px;
-          font-size: 12px;
-          border-radius: 3px;
-          color: #fff;
-          cursor: pointer;
-        }
-      }
-
-      .info-right-nav {
-        flex: 1;
-        display: flex;
-        justify-content: space-around;
         ul {
-          flex: 1;
-          justify-content: space-around;
           display: flex;
-          justify-content: space-around;
-          align-items: flex-end;
-          li {
-            list-style: none;
-            color: #fff;
-            cursor: pointer;
+          flex-direction: row;
+          margin-bottom: 0.2rem;
+
+          a {
+            padding: 0 1rem;
+            margin: 0 2rem;
+
+            &:hover {
+              border-bottom: 3px solid #f00;
+            }
+
           }
         }
+
+        li:first-child a {
+          border-bottom: 3px solid #f00;
+        }
+
       }
 
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        .info-button {
+          flex: 1;
+          display: flex;
+          align-items: center;
+
+          span {
+            display: inline-block;
+            padding: 0 1rem;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            background-color: #fff;
+            margin: 0 1rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+
+            &.signup {
+              background-color: #f00;
+              color: #fff;
+            }
+          }
+        }
+
+        .info-nav {
+          flex: 1;
+          display: flex;
+
+          ul {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+
+            li {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              color: #fff;
+            }
+          }
+
+        }
+      }
     }
 
+    .mobile-menu {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .header {
+    .navbar {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+
+      .logo {
+        margin-left: 1.5rem;
+        font-size: 2rem;
+      }
+
+      .menu {
+        margin-right: 1.5rem;
+        background-image: url(./img/menu.svg);
+        height: 3.2rem;
+        width: 3.2rem;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .collapse {
+        display: none;
+      }
+    }
   }
 }
