@@ -13,7 +13,7 @@ export default class Body extends Component<Props, State> {
   render() {
     return (
       <div className="body">
-        Body
+        Bodyddd
       </div>
     )
   }

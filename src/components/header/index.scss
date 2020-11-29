@@ -1,15 +1,17 @@
 $height: 82px;
-// $bgc:#000;
-$bgc:#ccc;
+$bgc:#000;
+// $bgc:#ccc;
 
 
 .header {
   .navbar {
     .logo {
-      color: #16a085;
-      font-weight: bold;
-      margin-right: 1.5rem;
-      font-size: 2rem;
+      margin-left: 1.5rem;
+      background-image: url(./img/logo.svg);
+      height: 3.2rem;
+      width: 11rem;
+      background-repeat: no-repeat;
+      cursor: pointer;
     }
 
     display: flex;

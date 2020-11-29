@@ -7,13 +7,13 @@ interface State {
   
 }
 
-export default class Menu extends Component<Props, State> {
+export default class Card extends Component<Props, State> {
   state = {}
 
   render() {
     return (
       <div>
-        menu
+        
       </div>
     )
   }
