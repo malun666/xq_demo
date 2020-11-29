@@ -1,6 +1,14 @@
 @media only screen and (max-width: 768px) {
-	body{
+	body {
 		background-color: #000;
+	}
+
+	.container {
+		width: 576px;
+		margin: 0 auto;
+		div[class*=col],div[class*=row-1]{
+			margin: 0;
+		}
 	}
 
 	.col-sm-12 {

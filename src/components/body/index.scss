@@ -1,4 +1,56 @@
-.body{
-  height: calc(100vh - 237px);
-  background-color: #fff;
+.body {
+
+  background-color: #2A2A2A;
+  color: #fff;
+  display: flex;
+
+  .container {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+
+    .row-1 {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      div {
+        margin-bottom: 1rem;
+
+        span {
+          padding: 0.5rem 1rem;
+          background-color: #f00;
+          margin-left: -3rem;
+          border-radius: 0.3rem;
+        }
+      }
+
+    }
+
+    .row-2 {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      div {
+        span {
+          font-size: 2rem;
+          padding-left: 1rem;
+
+          &:last-child {
+            padding-left: 0rem;
+          }
+        }
+      }
+
+      span,
+      .row-explore {
+        align-self: flex-end;
+        margin-right: 1rem;
+      }
+
+    }
+
+
+  }
+
 }
