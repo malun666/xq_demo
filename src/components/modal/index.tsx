@@ -1,32 +1,31 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
 
 import './index.scss';
 
 interface IProps {
-  menuHandler(isModalShow:boolean);
-  menuList: (string)[];
+  menuHandler(isModalShow: boolean);
+  menuList: string[];
   isOpen: boolean;
 }
 interface IState {
-  isStateOpen: boolean
+  isStateOpen: boolean;
 }
 
 export default class Modal extends Component<IProps, IState> {
   constructor(props: IProps) {
-    super(props)
+    super(props);
     this.state = {
       isStateOpen: props.isOpen || false,
-
-    }
+    };
   }
   onClose() {
-    this.props.menuHandler(false)
+    this.props.menuHandler(false);
   }
   render() {
     const { menuList } = this.props;
     return (
       <Fragment>
-        {this.state.isStateOpen &&
+        {this.state.isStateOpen && (
           <div className={`modal-container`}>
             <div className="header">
               <a href="#"></a>
@@ -38,15 +37,19 @@ export default class Modal extends Component<IProps, IState> {
             </div>
             <div className="content">
               <ul>
-                {menuList && menuList.map(item => {
-                  return <li key={item}><a href="#">{item}</a></li>
-                })}
+                {menuList &&
+                  menuList.map((item) => {
+                    return (
+                      <li key={item}>
+                        <a href="#">{item}</a>
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
-          </div>}
+          </div>
+        )}
       </Fragment>
-    )
+    );
   }
 }
-
-

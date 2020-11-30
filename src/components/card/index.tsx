@@ -1,28 +1,23 @@
-import React, { Component } from 'react'
-import './index.scss'
+import React, { Component } from 'react';
+import './index.scss';
 interface IProps {
   className: string;
-  style: object;
+  style: Record<string, unknown>;
 }
-interface IState {
-
-}
-
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface IState {}
 export default class Card extends Component<IProps, IState> {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
+  constructor(props: IProps) {
+    super(props);
+    this.state = {};
   }
-  render() {
-    const { style, className } = this.props
+  render(): JSX.Element {
+    const { style, className } = this.props;
 
     return (
       <div className={`card ${className}`} style={{ ...style }}>
         {this.props.children}
       </div>
-
-    )
+    );
   }
 }

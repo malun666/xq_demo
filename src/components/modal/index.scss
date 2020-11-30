@@ -41,21 +41,19 @@
         background-color: #f00;
         color: #fff;
       }
-
     }
-
   }
 
   .content {
     height: 100%;
     display: flex;
     margin: 0 1.5rem;
-    ul{
+    ul {
       flex: 1;
       display: flex;
       flex-direction: column;
-      
-      li{
+
+      li {
         height: 5rem;
         display: flex;
         align-items: center;
