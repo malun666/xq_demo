@@ -1,23 +1,21 @@
 import { url } from 'inspector'
 import React, { Component } from 'react'
 import './index.scss'
-interface Props {
+interface IProps {
+  className: string;
+  style: object;
+}
+interface IState {
 
 }
-interface State {
 
-}
-
-// export default class Card extends Component<Props, State> {
-export default class Card extends Component<any, any> {
+export default class Card extends Component<IProps, IState> {
   constructor(props) {
     super(props)
     this.state = {
 
     }
   }
-
-  // require('./../body/imgs/11.png')
   render() {
     const { style, className } = this.props
 

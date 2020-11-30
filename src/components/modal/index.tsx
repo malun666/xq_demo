@@ -1,20 +1,17 @@
-import React, { Component, Props, MouseEvent, ReactNode, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react'
 
 import './index.scss';
 
 interface IProps {
-  menuHandler?:Function;
-  className?: string;
-  menuList?: (string)[];
-  isOpen?: boolean;
+  menuHandler(isModalShow:boolean);
+  menuList: (string)[];
+  isOpen: boolean;
 }
 interface IState {
   isStateOpen: boolean
 }
 
 export default class Modal extends Component<IProps, IState> {
-  containerDom: React.RefObject<unknown>;
   constructor(props: IProps) {
     super(props)
     this.state = {
@@ -26,11 +23,11 @@ export default class Modal extends Component<IProps, IState> {
     this.props.menuHandler(false)
   }
   render() {
-    const { isOpen, menuList, className } = this.props;
+    const { menuList } = this.props;
     return (
       <Fragment>
         {this.state.isStateOpen &&
-          <div className={`modal-container ${className}`}>
+          <div className={`modal-container`}>
             <div className="header">
               <a href="#"></a>
               <i onClick={() => this.onClose()}></i>

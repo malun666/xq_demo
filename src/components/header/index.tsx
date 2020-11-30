@@ -1,30 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import Modal from './../modal/index'
 import './index.scss'
-interface Props {
+interface IProps {
 
 }
 interface IState {
   isModalShow: boolean;
+  menuList:(string)[];
 }
 
-export default class Header extends Component<any, IState> {
+
+export default class Header extends Component<IProps, IState> {
   // export default class Header {
-  constructor(props: any) {
+  constructor(props: IProps) {
     super(props)
     this.state = {
-      isModalShow: false
+      isModalShow: false,    
+      menuList:["Home", "RPG", "Arcade", "Brain Games", "Support", "Contact Us"]
     }
   }
-  menuHandler(isShow) {
+
+  menuHandler(isModalShow: boolean): void {
     this.setState({
-      isModalShow: isShow
+      isModalShow: isModalShow
     })
   }
   render() {
     return (
-      <>
-        {this.state.isModalShow && <Modal menuHandler={this.menuHandler.bind(this)} isOpen={this.state.isModalShow} menuList={["Home", "RPG", "Arcade", "Brain Games", "Support", "Contact Us"]} />}
+      <Fragment>
+        {this.state.isModalShow && <Modal menuHandler={this.menuHandler.bind(this)} isOpen={this.state.isModalShow} menuList={this.state.menuList} />}
         <header className="header">
           <div className="container">
             <div className="navbar">
@@ -56,7 +60,7 @@ export default class Header extends Component<any, IState> {
             </div>
           </div>
         </header>
-      </>
+      </Fragment>
     )
   }
 }

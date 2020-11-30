@@ -17,15 +17,21 @@
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "@babel/runtime": "^7.12.5",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.11",
+    "@types/redux-actions": "^2.6.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.0.0-alpha.14",
     "node-sass": "^5.0.0",
+    "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^10.1.0",
     "source-map-loader": "^1.1.2",
     "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.11",
     "typescript": "^4.1.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.8.0",
@@ -33,11 +39,11 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "ts-loader": "^8.0.11"
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-thunk": "^2.3.0"
   }
 }
