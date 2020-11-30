@@ -1,6 +1,12 @@
 {
-  "presets": ["@babel/env","@babel/preset-react"],
+  "presets": [
+    "@babel/env",
+    // "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
   "plugins": [
     "@babel/plugin-transform-runtime",
-    "@babel/plugin-proposal-function-bind"]
+    "@babel/plugin-proposal-function-bind"],
+  
 }

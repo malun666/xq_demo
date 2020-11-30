@@ -1,4 +1,3 @@
-import { url } from 'inspector'
 import React, { Component } from 'react'
 import './index.scss'
 interface IProps {

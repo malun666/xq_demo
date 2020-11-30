@@ -25,7 +25,7 @@ class Header extends Component<IProps, IState> {
       isModalShow: isModalShow
     })
   }
-  componentDidMount(){
+   componentDidMount(){
     this.props.loadNavBar()
   }
   render() {

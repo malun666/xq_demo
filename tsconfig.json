@@ -13,5 +13,8 @@
     "./src/*",
     "./src/page/*",
     "./src/components/*",
+  ],
+  "exclude": [
+    ".babelrc"
   ]
 }

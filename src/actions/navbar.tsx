@@ -19,6 +19,7 @@ export function loadNavBarAsync() {
         type: Type.LOAD_NAVBAR,
         payload: res
       })
+      return res
     })
   }
 }
