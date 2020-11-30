@@ -4,8 +4,8 @@
 	}
 
 	.container {
-		width: 576px;
-		margin: 0 auto;
+		width: 100%;
+		// margin: 0 auto;
 		div[class*=col],div[class*=row-1]{
 			margin: 0;
 		}
